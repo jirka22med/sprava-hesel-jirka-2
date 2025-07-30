@@ -484,7 +484,7 @@ tr:last-child td {
 
     <!-- Hlavní obsah -->
     <div id="mainContent" class="container hidden">
-        <button class="logout-btn" onclick="logout()">Odhlásit</button>
+        <button class="logout-btn" onclick="logout()">🔐</button>
         <h1>Šifrovaný správce hesel</h1>
         <div class="form-group">
             <label for="service">Služba:</label>
@@ -501,11 +501,11 @@ tr:last-child td {
                 <button type="button" class="password-toggle" onclick="togglePasswordVisibility('password')">👁️</button>
             </div>
         </div>
-        <button onclick="savePassword()">Uložit</button>
+        <button onclick="savePassword()">💾</button>
         
         <div class="button-group">
-            <button class="export-btn" onclick="exportToTxt()">Export TXT</button>
-            <button class="import-btn" onclick="triggerImport()">Import TXT</button>
+            <button class="export-btn" onclick="exportToTxt()">📤</button>
+            <button class="import-btn" onclick="triggerImport()">📥</button>
             <input type="file" id="importFile" class="file-input" accept=".txt" onchange="importFromTxt(event)">
         </div>
         
@@ -791,7 +791,7 @@ tr:last-child td {
                     row.insertCell().textContent = e.service;
                     row.insertCell().textContent = e.username;
                     const pwdCell = row.insertCell(); pwdCell.textContent = e.password;
-                    const actCell = row.insertCell(); actCell.innerHTML = `<button onclick="deletePassword(${i})">Smazat</button>`;
+                    const actCell = row.insertCell(); actCell.innerHTML = `<button onclick="deletePassword(${i})">🗑️</button>`;
                 });
             } catch (error) {
                 console.error("Chyba při načítání hesel z Firestore:", error);
