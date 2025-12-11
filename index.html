@@ -498,14 +498,14 @@ tr:last-child td {
             <label for="password">Heslo:</label>
             <div class="password-input-group">
                 <input type="password" id="password" placeholder="Heslo">
-                <button type="button" class="password-toggle" onclick="togglePasswordVisibility('password')">👁️</button>
+                <button type="button" class="password-toggle" onclick="togglePasswordVisibility('password')">👁️ zobrazit heslo</button>
             </div>
         </div>
         <button onclick="savePassword()">💾</button>
         
         <div class="button-group">
-            <button class="export-btn" onclick="exportToTxt()">📤</button>
-            <button class="import-btn" onclick="triggerImport()">📥</button>
+            <button class="export-btn" onclick="exportToTxt()">📤 stáhnout hesla</button>
+            <button class="import-btn" onclick="triggerImport()">📥 nahrát hesla</button>
             <input type="file" id="importFile" class="file-input" accept=".txt" onchange="importFromTxt(event)">
         </div>
         
@@ -950,3 +950,4 @@ tr:last-child td {
     </script>
 </body>
 </html>
+
