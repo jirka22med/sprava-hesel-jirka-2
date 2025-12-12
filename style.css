@@ -1,0 +1,1004 @@
+/* 🚀 HVĚZDNÁ FLOTILA - SPRÁVA HESEL CSS 🚀 */
+/* Vylepšeno admirálem Claude.AI pro více admirála Jiříka */
+/* ⚡ KOMPLETNÍ RESPONZIVNÍ SYSTÉM PRO VŠECHNY ZAŘÍZENÍ ⚡ */
+
+/* globální zákaz označování textu */
+html, body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+        
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #004499;
+    --accent-color: #00ccff;
+    --success-color: #4CAF50;
+    --warning-color: #FF9800;
+    --danger-color: #f44336;
+    --background-dark: #0a0f1a;
+    --background-light: #1a2332;
+    --text-primary: #ffffff;
+    --text-secondary: #b3c4d6;
+    --shadow-glow: 0 0 20px rgba(0, 204, 255, 0.3);
+    --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --border-glow: 1px solid rgba(0, 204, 255, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    max-width: 1000px; 
+    margin: 0px auto; 
+    padding: 5px; 
+    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-light) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Animované hvězdy na pozadí */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 4s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+@keyframes sparkle {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+}
+
+.container { 
+    background: rgba(26, 35, 50, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px; 
+    border-radius: 16px; 
+    box-shadow: var(--shadow-strong);
+    border: var(--border-glow);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color), var(--accent-color));
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.login-container { 
+    max-width: 450px; 
+    margin: 100px auto; 
+    text-align: center;
+    background: rgba(26, 35, 50, 0.98);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-glow);
+    border: var(--border-glow);
+} 
+
+h1 { 
+    color: var(--accent-color); 
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px var(--accent-color);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.form-group { 
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input { 
+    width: 100%; 
+    padding: 15px 20px; 
+    border: 2px solid rgba(0, 204, 255, 0.3);
+    border-radius: 8px; 
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-primary);
+    font-size: 1em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+input::placeholder {
+    color: rgba(179, 196, 214, 0.6);
+}
+
+button { 
+    background: linear-gradient(135deg, var(--success-color), #45a049);
+    color: white; 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    margin: 8px; 
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+.export-btn { 
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+.export-btn:hover { 
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+.import-btn { 
+    background: linear-gradient(135deg, var(--warning-color), #F57C00);
+}
+
+.import-btn:hover { 
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
+}
+
+.logout-btn { 
+    background: linear-gradient(135deg, var(--danger-color), #da190b);
+    float: right;
+}
+
+.logout-btn:hover { 
+    box-shadow: 0 8px 25px rgba(244, 67, 54, 0.4);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, var(--danger-color), #c62828);
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.delete-btn:hover {
+    box-shadow: 0 8px 25px rgba(244, 67, 54, 0.4);
+}
+
+.forgot { 
+    background: none; 
+    border: none; 
+    color: var(--accent-color); 
+    cursor: pointer; 
+    text-decoration: underline;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.forgot:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--accent-color);
+}
+
+table { 
+    width: 100%; 
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-strong);
+}
+
+th, td { 
+    padding: 18px; 
+    text-align: left; 
+    border-bottom: 1px solid rgba(0, 204, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+th { 
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+tr:hover td {
+    background: rgba(0, 204, 255, 0.1);
+    transform: scale(1.01);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+.file-input { 
+    display: none; 
+}
+
+.button-group { 
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.button-group button {
+    width: 100%;
+    margin: 0;
+}
+
+.password-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-group input {
+    padding-right: 150px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent-color);
+    font-size: 0.85em;
+    padding: 5px 10px;
+    line-height: 1;
+    transition: all 0.3s ease;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.password-toggle:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--accent-color);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.masterkey-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.masterkey-modal-content {
+    background: linear-gradient(135deg, var(--background-light), var(--background-dark));
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-glow);
+    border: var(--border-glow);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.masterkey-modal-message {
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.masterkey-modal-buttons button {
+    margin: 8px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.masterkey-modal-buttons .confirm-ok {
+    background: linear-gradient(135deg, var(--success-color), #45a049);
+    color: white;
+    border: none;
+}
+
+.masterkey-modal-buttons .confirm-ok:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+.empty-state-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    animation: scanLine 2s linear infinite;
+}
+
+/* 🚀 Notifikace Hvězdné flotily - VRCHNÍ POZICE */
+.toast-notification {
+    visibility: hidden;
+    min-width: 300px;
+    background: rgba(0, 20, 40, 0.95);
+    border: 1px solid var(--success-color);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    padding: 16px 25px;
+    position: fixed;
+    z-index: 2000;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+    font-size: 1.1em;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-notification.show {
+    visibility: visible;
+    opacity: 1;
+    top: 20px;
+}
+
+/* ========================================== */
+/* 🖥️ VELKÉ MONITORY (1920px a více) - Warp 9 */
+/* ========================================== */
+@media (min-width: 1920px) {
+    body {
+        max-width: 1400px;
+        padding: 20px;
+    }
+    
+    .container {
+        padding: 50px;
+    }
+    
+    h1 {
+        font-size: 3em;
+        margin-bottom: 40px;
+    }
+    
+    .login-container {
+        max-width: 550px;
+        padding: 60px;
+    }
+    
+    input {
+        padding: 20px 25px;
+        font-size: 1.1em;
+    }
+    
+    button {
+        padding: 16px 35px;
+        font-size: 1.1em;
+    }
+    
+    th, td {
+        padding: 22px;
+        font-size: 1.05em;
+    }
+    
+    .toast-notification {
+        min-width: 400px;
+        font-size: 1.2em;
+        padding: 20px 30px;
+    }
+    
+    .empty-state {
+        padding: 80px 20px;
+        font-size: 1.3em;
+    }
+}
+
+/* ========================================== */
+/* 💻 STANDARDNÍ DESKTOP (1200px - 1919px) */
+/* ========================================== */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    body {
+        max-width: 1200px;
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 40px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* ========================================== */
+/* 🖥️ MENŠÍ DESKTOP / VELKÝ LAPTOP (992px - 1199px) */
+/* ========================================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 35px;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    th, td {
+        padding: 16px;
+    }
+}
+
+/* ========================================== */
+/* 📱 TABLETY NA ŠÍŘKU (768px - 991px) */
+/* ========================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        margin: 15px;
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    
+    .login-container {
+        max-width: 500px;
+        padding: 35px;
+        margin: 80px auto;
+    }
+    
+    input {
+        padding: 14px 18px;
+    }
+    
+    button {
+        padding: 12px 20px;
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 14px;
+        font-size: 0.95em;
+    }
+    
+    .password-input-group input {
+        padding-right: 130px;
+    }
+    
+    .password-toggle {
+        font-size: 0.8em;
+        right: 12px;
+    }
+    
+    .button-group {
+        gap: 8px;
+    }
+    
+    .toast-notification {
+        min-width: 280px;
+        font-size: 1.05em;
+    }
+}
+
+/* ========================================== */
+/* 📱 TABLETY NA VÝŠKU (576px - 767px) */
+/* ========================================== */
+@media (min-width: 576px) and (max-width: 767px) {
+    body {
+        margin: 12px;
+        padding: 8px;
+    }
+    
+    .container {
+        padding: 25px;
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .login-container {
+        max-width: 450px;
+        padding: 30px;
+        margin: 60px auto;
+    }
+    
+    input {
+        padding: 13px 16px;
+        font-size: 0.95em;
+    }
+    
+    button {
+        padding: 11px 18px;
+        font-size: 0.85em;
+    }
+    
+    .button-group {
+        gap: 8px;
+    }
+    
+    .logout-btn {
+        float: none;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    th, td {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+    
+    .password-input-group input {
+        padding-right: 110px;
+    }
+    
+    .password-toggle {
+        font-size: 0.75em;
+        right: 10px;
+        padding: 4px 8px;
+    }
+    
+    .toast-notification {
+        min-width: 260px;
+        font-size: 1em;
+        padding: 14px 20px;
+    }
+    
+    .masterkey-modal-content {
+        padding: 35px;
+        width: 85%;
+    }
+    
+    .empty-state {
+        padding: 50px 15px;
+        font-size: 1.05em;
+    }
+}
+
+/* ========================================== */
+/* 📱 VELKÉ MOBILY (480px - 575px) */
+/* ========================================== */
+@media (min-width: 480px) and (max-width: 575px) {
+    body {
+        margin: 10px;
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .login-container {
+        max-width: 100%;
+        padding: 25px;
+        margin: 50px auto;
+    }
+    
+    input {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 0.8em;
+    }
+    
+    .button-group {
+        gap: 8px;
+    }
+    
+    .logout-btn {
+        float: none;
+        width: 100%;
+        max-width: 220px;
+    }
+    
+    table {
+        font-size: 0.85em;
+    }
+    
+    th, td {
+        padding: 10px 8px;
+        font-size: 0.85em;
+    }
+    
+    th {
+        font-size: 0.8em;
+    }
+    
+    .password-input-group input {
+        padding-right: 100px;
+    }
+    
+    .password-toggle {
+        font-size: 0.7em;
+        right: 8px;
+        padding: 4px 6px;
+    }
+    
+    .toast-notification {
+        min-width: 240px;
+        font-size: 0.95em;
+        padding: 12px 18px;
+    }
+    
+    .masterkey-modal-content {
+        padding: 30px 20px;
+        width: 90%;
+    }
+    
+    .masterkey-modal-message {
+        font-size: 1.1em;
+    }
+    
+    .masterkey-modal-buttons button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    
+    .empty-state {
+        padding: 40px 10px;
+        font-size: 1em;
+    }
+    
+    .empty-state-icon {
+        font-size: 3em;
+    }
+}
+
+/* ========================================== */
+/* 📱 MALÉ MOBILY (320px - 479px) */
+/* ========================================== */
+@media (max-width: 479px) {
+    body {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+    
+    .login-container {
+        max-width: 100%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+    
+    input {
+        padding: 11px 12px;
+        font-size: 0.85em;
+        border-radius: 6px;
+    }
+    
+    button {
+        padding: 9px 12px;
+        font-size: 0.75em;
+        border-radius: 6px;
+    }
+    
+    .button-group {
+        gap: 6px;
+        margin-top: 20px;
+    }
+    
+    .logout-btn {
+        float: none;
+        width: 100%;
+        max-width: none;
+    }
+    
+    table {
+        font-size: 0.75em;
+        border-radius: 8px;
+    }
+    
+    th, td {
+        padding: 8px 6px;
+        font-size: 0.8em;
+    }
+    
+    th {
+        font-size: 0.75em;
+        padding: 10px 6px;
+    }
+    
+    .delete-btn {
+        padding: 6px 12px;
+        font-size: 0.75em;
+    }
+    
+    .password-input-group input {
+        padding-right: 90px;
+    }
+    
+    .password-toggle {
+        font-size: 0.65em;
+        right: 6px;
+        padding: 3px 5px;
+    }
+    
+    .toast-notification {
+        min-width: 200px;
+        font-size: 0.85em;
+        padding: 10px 15px;
+        border-radius: 0 0 8px 8px;
+        top: 10px;
+    }
+    
+    .toast-notification.show {
+        top: 10px;
+    }
+    
+    .masterkey-modal-content {
+        padding: 25px 15px;
+        width: 95%;
+        border-radius: 12px;
+    }
+    
+    .masterkey-modal-message {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    
+    .masterkey-modal-buttons button {
+        padding: 10px 20px;
+        font-size: 0.85em;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .empty-state {
+        padding: 30px 10px;
+        font-size: 0.9em;
+    }
+    
+    .empty-state-icon {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    
+    label {
+        font-size: 0.85em;
+        margin-bottom: 6px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+/* ========================================== */
+/* 📱 EXTRÉMNĚ MALÉ MOBILY (do 320px) */
+/* ========================================== */
+@media (max-width: 320px) {
+    body {
+        margin: 3px;
+        padding: 3px;
+    }
+    
+    .container {
+        padding: 12px;
+        border-radius: 8px;
+    }
+    
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 12px;
+    }
+    
+    .login-container {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    input {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+    
+    button {
+        padding: 8px 10px;
+        font-size: 0.7em;
+    }
+    
+    .button-group {
+        gap: 5px;
+    }
+    
+    th, td {
+        padding: 6px 4px;
+        font-size: 0.7em;
+    }
+    
+    .toast-notification {
+        min-width: 180px;
+        font-size: 0.8em;
+        padding: 8px 12px;
+    }
+    
+    .masterkey-modal-content {
+        padding: 20px 12px;
+    }
+    
+    .masterkey-modal-message {
+        font-size: 0.9em;
+    }
+}
+
+/* ========================================== */
+/* 🌐 ORIENTACE LANDSCAPE PRO MOBILY */
+/* ========================================== */
+@media (max-width: 991px) and (orientation: landscape) {
+    body {
+        padding: 8px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    
+    .login-container {
+        margin: 30px auto;
+        padding: 25px;
+    }
+    
+    .masterkey-modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 25px;
+    }
+    
+    .button-group {
+        gap: 8px;
+    }
+}
