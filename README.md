@@ -7,6 +7,16 @@
 
 > *"Bezpečnost na úrovni Hvězdné flotily - Vaše hesla chráněna jako utajované dokumenty Enterprise!"* 🖖
 
+---
+
+## 🌐 Live Demo
+
+**🚀 [Spustit aplikaci na GitHub Pages](https://jirka22med.github.io/sprava-hesel-jirka-2/)**
+
+**📦 [GitHub Repository](https://github.com/jirka22med/sprava-hesel-jirka-2)**
+
+---
+
 ## 📋 Obsah
 
 - [O projektu](#-o-projektu)
@@ -26,6 +36,8 @@
 ## 🎯 O projektu
 
 **Šifrovaný správce hesel** je moderní webová aplikace inspirovaná univerzem Star Trek, která poskytuje **vojenskou úroveň zabezpečení** pro správu vašich hesel. Všechna data jsou šifrována pomocí **AES-256** před uložením do cloudu a synchronizována napříč zařízeními pomocí **Firebase Firestore**.
+
+🌐 **Live demo:** [https://jirka22med.github.io/sprava-hesel-jirka-2/](https://jirka22med.github.io/sprava-hesel-jirka-2/)
 
 ### ✨ Klíčové vlastnosti
 
@@ -149,9 +161,15 @@
 ### Krok 1: Klonování repozitáře
 
 ```bash
-git clone https://github.com/vas-username/sprava-hesel-jirka.git
-cd sprava-hesel-jirka
+git clone https://github.com/jirka22med/sprava-hesel-jirka-2.git
+cd sprava-hesel-jirka-2
 ```
+
+### Alternativně - použití GitHub Pages
+
+Aplikace je hostovaná na GitHub Pages a můžete ji použít přímo bez instalace:
+
+**🌐 [https://jirka22med.github.io/sprava-hesel-jirka-2/](https://jirka22med.github.io/sprava-hesel-jirka-2/)**
 
 ### Krok 2: Konfigurace Firebase
 
@@ -206,10 +224,19 @@ python -m http.server 8080
 
 ### Krok 5: Otevření v prohlížeči
 
+#### Lokální instalace:
 Otevřete prohlížeč a přejděte na:
 ```
 http://localhost:8080
 ```
+
+#### GitHub Pages (online verze):
+Nebo použijte přímo online verzi:
+```
+https://jirka22med.github.io/sprava-hesel-jirka-2/
+```
+
+> **💡 Tip:** GitHub Pages verze funguje bez nutnosti instalace!
 
 ---
 
@@ -516,7 +543,11 @@ SOFTWARE.
 
 ## 📞 Kontakt & Podpora
 
-**Issues:** [GitHub Issues](https://github.com/vas-username/sprava-hesel-jirka/issues)
+**GitHub Repository:** [https://github.com/jirka22med/sprava-hesel-jirka-2](https://github.com/jirka22med/sprava-hesel-jirka-2)
+
+**Live Demo:** [https://jirka22med.github.io/sprava-hesel-jirka-2/](https://jirka22med.github.io/sprava-hesel-jirka-2/)
+
+**Issues:** [GitHub Issues](https://github.com/jirka22med/sprava-hesel-jirka-2/issues)
 
 **Dokumentace:** Tento README.md soubor
 
